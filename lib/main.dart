@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_login/patient_ui.dart';
 
 import 'signup.dart';
 import 'queue_ui.dart';
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
-        '/home': (BuildContext context) => new Home()
+        '/home': (BuildContext context) => new Home(),
+        '/patient': (BuildContext context) => new PatientUI()
       },
       home: new MyHomePage(),
     );
@@ -93,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: GestureDetector(
                           onTap: () {
                             print("on tapped");
-                            Navigator.of(context).pushNamed('/home');
+                            Navigator.of(context).pushNamed('/patient');
                           },
                           child: Center(
                             child: Text(
@@ -144,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'New to Spotify ?',
+                  'New to App ?',
                   style: TextStyle(fontFamily: 'Montserrat'),
                 ),
                 SizedBox(width: 5.0),
@@ -164,6 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             )
           ],
-        ));
+        )
+        );
   }
 }

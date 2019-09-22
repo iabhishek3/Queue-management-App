@@ -25,7 +25,7 @@ class ApplicationHttpserive {
       if (statusCode < 200 || statusCode > 400 || json == null) {
         throw new Exception("Error while fetching data");
       }
-
+// print(response.body);
       return welcomeFromJson(response.body);
     });
   }
