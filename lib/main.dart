@@ -88,6 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(
                       height: 40.0,
                       child: Material(
+                        
                         borderRadius: BorderRadius.circular(20.0),
                         shadowColor: Colors.greenAccent,
                         color: new Color(0xFF37ac94),
@@ -95,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: GestureDetector(
                           onTap: () {
                             print("on tapped");
-                            Navigator.of(context).pushNamed('/patient');
+                            Navigator.of(context).pushNamed('/home');
                           },
                           child: Center(
                             child: Text(
