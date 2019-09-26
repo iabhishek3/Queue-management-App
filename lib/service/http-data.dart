@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/io_client.dart';
-import 'package:flutter_ui_login/dto/queue_dto.dart';
+import '../dto/queue_dto.dart';
 
 class ApplicationHttpserive {
   Future<Welcome> postGeneric(String url, body) async {
